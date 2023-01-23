@@ -19,12 +19,11 @@ function onFormSubmit(e) {
     
     e.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEA)
-    console.log(localStorage.setItem(STORAGE_KEA))
+  
 }
 
 function onFormInput(e) {
     formData[e.target.name] = e.target.value;
-    console.log(formData);
     localStorage.setItem(STORAGE_KEA, JSON.stringify(formData))
 }
 
@@ -35,6 +34,6 @@ function populateTextInput() {
     if (savedObj) {
         input.value = savedObj.email;
         textarea.value = savedObj.message;
-        console.log(savedObj);
+        
     }
 }
